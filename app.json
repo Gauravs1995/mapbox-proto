@@ -14,13 +14,15 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.gauravs1995.mapboxproto"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.gauravs1995.mapboxproto"
     },
     "web": {
       "bundler": "metro",
@@ -28,10 +30,25 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoiZ2F1cmF2czE5OTUiLCJhIjoiY203MzdvZDF2MGkzYjJscHNrbWsyZHpnciJ9.bHTY-maR85B_7m9IJ12Mrg"
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "e0328306-08d8-46c7-8a5e-e9f5ebb7da6c"
+      }
+    },
+    "owner": "gauravs1995"
   }
 }
